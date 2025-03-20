@@ -35,7 +35,7 @@ def save_traj(
         # for keyframe_id in frames.keyframe_ids:
         for i in range(len(frames)):
             keyframe = frames[i]
-            t = timestamps[keyframe.frame_id]
+            t = keyframe.frame_id
             if intrinsics is None:
                 T_WC = as_SE3(keyframe.T_WC)
             else:
